@@ -1,0 +1,24 @@
+# permissions for end users to edit adds.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: add-editor-role
+rules:
+- apiGroups:
+  - math.example.com
+  resources:
+  - adds
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - math.example.com
+  resources:
+  - adds/status
+  verbs:
+  - get

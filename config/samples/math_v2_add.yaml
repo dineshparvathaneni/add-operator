@@ -1,0 +1,6 @@
+apiVersion: math.example.com/v2
+kind: Add
+metadata:
+  name: add-sample
+spec:
+  # Add fields here

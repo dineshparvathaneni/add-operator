@@ -1,0 +1,27 @@
+domain: example.com
+layout:
+- go.kubebuilder.io/v3
+plugins:
+  manifests.sdk.operatorframework.io/v2: {}
+  scorecard.sdk.operatorframework.io/v2: {}
+projectName: add-operator
+repo: github.com/example/add-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: example.com
+  group: math
+  kind: Add
+  path: github.com/example/add-operator/api/v1
+  version: v1
+- api:
+    crdVersion: v1
+    namespaced: true
+  domain: example.com
+  group: math
+  kind: Add
+  path: github.com/example/add-operator/api/v2
+  version: v2
+version: "3"

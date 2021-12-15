@@ -1,0 +1,7 @@
+apiVersion: math.example.com/v2
+kind: Add
+metadata:
+  name: add-src
+spec:
+  a: 2
+  b: 3
